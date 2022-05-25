@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <!-- ↑このサイトのみ公開しているため、googleなどのクローラーに引っかからないようにしています。 -->
+    <title>Google reCAPTCHAの実装</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/recap.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="../Font/adobe_font.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="site_title">朝礼での技術シェア<br>(2回目)</h1>
+        </ul>
+    </header>
+    <main>
+        <h2>Google reCAPTCHAの実装</h2>
+        <p class="link"><a href="https://bisco16.github.io/morning_assembly_recap/">本来の動きを見たい方はこちら(ローカル環境では動きません)</a></p>
+        <p>と言っても、認証したからってなんかあるわけではありません。<br>本当だったら、ページが切り替わるとかそういうのがしたかったのですが、このサイトのサーバーであるGithubがphp非対応だったため、実装できませんでした。<br>
+            (決してクレームをいっているのではありません)</p>
+        <p class="link"><a href="https://www.profuture.co.jp/mk/column/33599">参考サイト</a></p>
+        <div>
+            <h3>Ver2</h3>
+            <form action="?" method="POST">
+            <div class="g-recaptcha" data-sitekey="6LesGRogAAAAAGGwmz2ZcZwxa-_NaPWD36gsS_eR"></div>
+            </form>
+            <p>様々なサイトでよく使われるバージョンです。<br>「○○のタイルを選択して下さい」とか、「○○の画像を選択して下さい」はこれです。</p>
+            <p>メリットは、セキュリティが上がることです。そもそもの目的であるbotが解析出来ないような画像を使っているからでしょう。
+                <br>デメリットはユーザビリティが低下するということです。人が「この画像はそうだろう」とか「これは違うな」とかがすぐ解析出来ればいいのですが、「・・・これはどっちだ？」みたいな画像がたっぷりと出てくるため、
+                それの時間のせいでユーザビリティが低下するのではないかと思います。
+            </p>
+        </div>
+        <div>
+            <h3>Ver3</h3>
+            <form action="?" method="POST">
+            <div class="g-recaptcha" data-sitekey="6LdF1RogAAAAAEXqtbxKbQlK_gD23q6AG1gtWLr3"></div>
+            </form>
+            <p>比較的新しいサイトに使われている認証システムです。どうやら、aiがサイト訪問者の動きを学習して、<br>
+            訪問者がbotか人間か勝手に判別してくれるそうです。人と判断すればとくになにもなく、botと思われば画像選択をさせるそうです。
+            たぶん、このサイトではうまく動きません。</p>
+        </div>
+    </main>
+    <footer>        
+        <div class="copyright">
+            <small>© 2022 All Rights Reserved.このサイト自体の無断転載は禁止です。(仮に転載されても誰も見ないと思いますが)</small>
+        </div></footer>
+</body>
+</html>
