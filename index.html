@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google reCAPTCHAの実装</title>
+    <link rel="stylesheet" href="main.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
-    <header></header>
+    <header>
+        <h1 class="site_title">朝礼での技術シェア<br>(2回目)</h1>
+        </ul>
+    </header>
     <main>
+        <a href="https://syncer.jp/how-to-introduction-recaptcha">参考サイト</a>
         <div>
             <form action="?" method="POST">
-            <div class="g-recaptcha" data-sitekey="6LesGRogAAAAAGGwmz2ZcZwxa-_NaPWD36gsS_eR"></div>
+            <div class="g-recaptcha" data-sitekey="6LesGRogAAAAAGGwmz2ZcZwxa-_NaPWD36gsS_eR" data-callback="../js/recap.js"></div>
             <br/>
             <input type="submit" value="Submit">
             </form>
