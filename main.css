@@ -1,0 +1,212 @@
+@charset "utf-8";
+
+body {
+    background-color: #d6f6ff;
+    font-family: a-otf-ryumin-pr6n,
+        serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header {
+    padding: 10px;
+}
+
+main {
+    margin: 10px 60px;
+    background-color: #fff;
+}
+
+.site_title {
+    background-color: #9ACD32;
+    width: 350px;
+    height: auto;
+    border-radius: 45px;
+    margin: 40px auto;
+    margin-top: 0;
+    padding: 5px;
+    color: white;
+    font-family: wanpaku-ruika,
+        sans-serif;
+    font-weight: 100;
+    text-align: center;
+}
+
+.contest{
+    display: flex;
+}
+
+.menu_pc{
+    display: flex;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+/* ここからハンバーガーメニューの処理 */
+
+.openbtn1 {
+    position: relative;
+    /*ボタン内側の基点となるためrelativeを指定*/
+    background: #57a2c7;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    pointer-events: auto;
+    visibility: hidden;
+}
+
+@media (max-width:640px) {
+    .openbtn1 {
+        visibility: visible;
+        padding-top: 40px;
+    }
+}
+
+
+/*ボタン内側*/
+.openbtn1 span {
+    display: inline-block;
+    transition: all .4s;
+    /*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+    width: 45%;
+}
+
+.openbtn1 span:nth-of-type(1) {
+    top: 15px;
+}
+
+.openbtn1 span:nth-of-type(2) {
+    top: 23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+    top: 31px;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+    opacity: 0;
+    /*真ん中の線は透過*/
+}
+
+.openbtn1.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+.sp_nav {
+    padding: 40px 3%;
+    display: none;
+}
+
+@media (max-width:640px) {
+    .sp_nav {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+
+.sp_nav li {
+    display: none;
+}
+
+@media (max-width:640px) {
+    .sp_nav li {
+        display: block;
+        opacity: 1;
+        margin-bottom: 15px;
+    }
+}
+
+/* この部分で、PC用ナビゲーションボタンを消しています */
+
+@media (max-width:640px) {
+    .pc_nav {
+        display: none;
+    }
+}
+
+/* ここまでハンバーガーメニューの処理 */
+
+footer{
+    background-color: #fff;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+}
+
+/*========= Loading用CSS ===============*/
+/* あとに読み込む理由ですが、こうしないと画像が読み込まないからです。 */
+
+
+/* Loading背景画面設定　*/
+#splash {
+/*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* z-index: 999; */
+  background:#333;
+  text-align:center;
+  color:#fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+  width:260px;
+  height: 260px;
+}
+
+.load0,.load1,.load2{
+display: none;
+}
+/*fadeUpをするアイコンの動き*/
+/* フェードインです */
+.fadeUp{
+    animation-name: fadeUpAnime;
+    animation-duration:3000ms;
+    animation-fill-mode:forwards;
+    display: block;
+}
+
+@keyframes fadeUpAnime{
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*========= Loading用CSS終わり ===============*/
