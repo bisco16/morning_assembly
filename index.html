@@ -5,10 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google reCAPTCHAの実装</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <header></header>
-    <main></main>
+    <main>
+        <div>
+            <form action="?" method="POST">
+            <div class="g-recaptcha" data-sitekey="6LesGRogAAAAAGGwmz2ZcZwxa-_NaPWD36gsS_eR"></div>
+            <br/>
+            <input type="submit" value="Submit">
+            </form>
+        </div>
+    </main>
     <footer></footer>
 </body>
 </html>
