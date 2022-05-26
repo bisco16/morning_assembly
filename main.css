@@ -8,6 +8,10 @@ body {
     font-style: normal;
 }
 
+ul {
+    list-style-type: none;
+}
+
 header {
     padding: 10px;
 }
