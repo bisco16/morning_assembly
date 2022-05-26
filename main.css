@@ -31,3 +31,26 @@ main {
     font-weight: 100;
     text-align: center;
 }
+
+h2 {
+    background-color: green;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    width: 60%;
+    margin: 35px auto;
+    padding: 5px;
+}
+
+
+@media (max-width:640px) {
+    h2 {
+        width: auto;
+    }
+}
+
+h3 {
+    margin: 10px auto;
+    border-bottom: 1px solid red;
+    width: auto;
+}
