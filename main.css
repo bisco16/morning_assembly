@@ -60,9 +60,23 @@ h3 {
     width: auto;
 }
 
+h4{
+    background-color: yellowgreen;
+    text-align: center;
+    color: white;
+    padding: 3px;
+    width: 80%;
+    margin: 10px auto;
+    border-radius:40px  
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
 .link{
     background-color: royalblue;
-    color: white;
     border-radius:45px;
     padding: 0 5px;
     margin: auto 10px;
