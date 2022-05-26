@@ -21,14 +21,14 @@
     <main>
         <h2>Google reCAPTCHAの実装</h2>
         <h3>そもそもこれは何だろう？</h3>
-        <!-- <p class="link"><a href="https://bisco16.github.io/morning_assembly_recap/">本来の動きを見たい方はこちら(ローカル環境では動きません)</a></p> -->
+        <p class="link"><a href="https://bisco16.github.io/morning_assembly_recap/" target="_blank" rel="noopener noreferrer">本来の動きを見たい方はこちら<br>(ローカル環境では動きません)</a></p>
         <p>よくアンケートや問い合わせ欄に使われているbotかそうではないか判断する技術です。システム自体はいろいろなメーカーさんがやっているのですが、有名なのはこのGoogle社の判断システムでしょう。
             実際のサイトだったら、認証したら次のステップに進んだりしますが、このサイトはなんかあるわけではありません。<br>サーバーサイドで認証(要はPHP)して、次のステップへ進むというのはわかったのですが、<br>
             このサイトのサーバーがphp非対応だったため、実装できませんでした。(決してクレームをいっているのではありません)</p>
         <p class="link"><a href="https://www.profuture.co.jp/mk/column/33599">参考サイト</a></p>
         <div>
             <h3>Ver2</h3>
-            <form action="test.js" method="POST">
+            <form action="?" method="POST">
             <div class="g-recaptcha" data-sitekey="6LesGRogAAAAAGGwmz2ZcZwxa-_NaPWD36gsS_eR"></div>
             </form>
             <p>様々なサイトでよく使われるバージョンです。<br>「○○のタイルを選択して下さい」とか、「○○の画像を選択して下さい」はこのタイプです。</p>
@@ -37,6 +37,8 @@
                 それの時間のせいでユーザビリティが低下するのではないかと思います。
             </p>
         </div>
+        <p class="link"><a href="https://www.webdesignleaves.com/pr/plugins/google_recaptcha.php">使用方法1</a></p>
+        <p class="link"><a href="https://www.profuture.co.jp/mk/column/33599#%E5%AE%9F%E8%A3%85">使用方法2</a></p>
         <div>
             <h3>Ver3</h3>
             <h4>うまく動作しなかったので紹介だけでも</h4>
@@ -46,9 +48,7 @@
         </div>
     </main>
     <footer>        
-        <div class="copyright">
-            <small>© 2022 このサイト自体の無断転載は禁止です。(仮に転載されても誰も見ないと思いますが)</small>
-        </div>
+        <small>© 2022 このサイト自体の無断転載は禁止です。(仮に転載されても誰も見ないと思いますが)</small>
    </footer>
 </body>
 </html>
