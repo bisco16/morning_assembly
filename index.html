@@ -30,7 +30,7 @@ function checkRecaptcha() {
 
 function showThxMessage(){
    var email = document.myForm.elements['entry.896218278'].yvalue; // メールアドレスのname属性
-   if(email !== ''){recapだよ
+   if(email !== ''){
        document.myForm.reset();
        document.getElementById('formWrapper').style.display = 'none';
        document.getElementById('thxMessage').style.display = 'block';
@@ -44,6 +44,7 @@ function showThxMessage(){
         <label>お問い合わせ内容</label>
         <textarea required name="entry.1712780392"></textarea>
                 <div class="g-recaptcha" data-sitekey="6LesGRogAAAAAGGwmz2ZcZwxa-_NaPWD36gsS_eR"></div>
+                <div id="recaptcha-error"></div>
         <input type="hidden" name="entry.1099493155" value="dummy">
         <input type="submit" value="送信">
         <iframe name="dummyIframe" style="display:none;" onload="showThxMessage();"></iframe>
