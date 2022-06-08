@@ -23,14 +23,14 @@ function checkRecaptcha() {
   }
   else { 
     //reCaptch 認証
-    document.myForm.elements['entry.**********'].value = response; // recaptchaのname属性
+    document.myForm.elements['entry.1099493155'].value = response; // recaptchaのname属性
     document.myForm.submit();
   }
 }
 
 function showThxMessage(){
-   var email = document.myForm.elements['entry.**********'].value; // メールアドレスのname属性
-   if(email !== ''){無題のフォーム
+   var email = document.myForm.elements['entry.896218278'].yvalue; // メールアドレスのname属性
+   if(email !== ''){recapだよ
        document.myForm.reset();
        document.getElementById('formWrapper').style.display = 'none';
        document.getElementById('thxMessage').style.display = 'block';
@@ -51,7 +51,6 @@ function showThxMessage(){
 </div>
 <div id="thxMessage" style="display:none;">
     お問い合わせありがとうございました。<br /><br />
-    などの送信後のメッセージ
 </div>
 <script src="https://www.google.com/recaptcha/api.js"></script>
 </body>
