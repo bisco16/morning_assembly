@@ -4,6 +4,7 @@
     if(response.length == 0) {
     //reCaptcha 未認証
         window.alert("reCaptchaが未認証です");
+        return false;
     }
     else { 
 //reCaptch 認証
