@@ -3,7 +3,7 @@
     var response = grecaptcha.getResponse();
     if(response.length == 0) { 
     //reCaptcha 未認証
-    document.getElementById('recaptcha-error').innerHTML = "reCaptchaにチェックを入れてください";
+   window.alert("お問い合わせありがとうございました。");
     return false;
     }
     else { 
