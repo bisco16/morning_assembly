@@ -16,7 +16,7 @@
     function showThxMessage(){
     var text = document.myForm.elements['entry.896218278']; // メールアドレスのname属性
     if(text !== ''){
-//     document.myForm.reset();
+    document.myForm.reset();
     document.getElementById('thxMessage').style.display = 'block';
     window.alert("お問い合わせありがとうございました。")
     }
