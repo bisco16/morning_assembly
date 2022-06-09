@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <!-- ↑このサイトのみ公開しているため、googleなどのクローラーに引っかからないようにしています。 -->
+    <title>Google reCAPTCHAの実装</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="main.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="adobe_font.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="site_title">朝礼での技術シェア<br>(3回目)</h1>
+        <nav>
+            <ul class="menu_pc">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="html/random.html">ランダムLoading</a></li>
+                <li><a href="https://bisco16.github.io/morning_assembly_recap/" target="_blank" rel="noopener noreferrer">Google reCAPTCHAの実装</a></li>
+                <li><a href="html/LiveShare.html">余談</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div id="formWrapper">
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdZ0fywr3cfUMa5DKvLcAds4NRvioEle0-h03yeCAU036qRFQ/formResponse" method="post"name="myForm" target="dummyIframe" onsubmit="return checkRecaptcha();">
+            <table>
+                <tr>
+                    <th>ニックネーム</th>
+                    <td><input type="text" name="entry.896218278" value="" required/></td>
+                </tr>
+                <tr>
+                    <th>好きな動物</th>
+                    <td><input type="text"required name="entry.1712780392"></td>
+                </tr>
+            </table>
+            <div class="g-recaptcha" data-sitekey="6LesGRogAAAAAGGwmz2ZcZwxa-_NaPWD36gsS_eR"></div>
+            <input type="hidden" name="entry.1099493155" value="dummy">
+            <input type="submit" value="送信">
+            <iframe name="dummyIframe" style="display:none;" onload="showThxMessage();"　></iframe>
+        </form>
+    </div>
+    <div id="thxMessage">
+        <p>お問い合わせありがとうございました。</p>
+    </div>
+    <p>という感じのものを作りました</p>
+</main>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="recap.js"></script>
+    </body>
+</html>
