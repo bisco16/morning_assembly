@@ -79,6 +79,10 @@ a{
     color: white;
 }
 
+input,textarea{
+    border:1px solid black;
+}
+
 .link{
     background-color: royalblue;
     border-radius:45px;
