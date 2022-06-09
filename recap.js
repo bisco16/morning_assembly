@@ -15,7 +15,7 @@
 
     function showThxMessage(){
     var text = document.myForm.elements['entry.896218278']; // メールアドレスのname属性
-    if(text !== ''){recapだよ
+    if(text !== ''){
     document.myForm.reset();
     document.getElementById('formWrapper').style.display = 'none';
     document.getElementById('thxMessage').style.display = 'block';
