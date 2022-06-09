@@ -25,6 +25,7 @@
         </nav>
     </header>
     <main>
+                <h2>アンケート本体</h2>
     <div id="formWrapper">
         <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdZ0fywr3cfUMa5DKvLcAds4NRvioEle0-h03yeCAU036qRFQ/formResponse" method="post"name="myForm" target="dummyIframe" onsubmit="return checkRecaptcha();">
             <table>
@@ -47,6 +48,21 @@
         <p>お問い合わせありがとうございました。</p>
     </div>
     <p>という感じのものを作りました</p>
+                <h2>解説</h2>
+        <h3>PHPが使えないなら、どんな方法が？</h3>
+        <p>
+            一応、PHPが使えるサーバーは有料ならいくらでもあったのですが、<br>
+            3ヶ月契約などが多かったため、たった1日のために利用するのはどうかと思ったのでこうしています。<br>
+            そして、Google フォームを reCaptcha 付で埋め込むという、なんとも面白そうな方法を見つけました。
+        </p>
+        <h3>デベロッパーツールが必要だって？</h3>
+        <p>
+            何と、デベロッパーツールを使って、Googleフォームのリンクを取得しなければならず、
+            さらに、各回答箇所の「entry.○○」というところをいちいちコピーしなくてはなりませんでした。
+        </p>
+        <h3>結論</h3>
+        <p>絶対PHPの方が楽！</p>
+        <a href="https://www.imuza.com/entry/2020/08/16/154209" style="color:black ;">参考サイトはこちら</a>
 </main>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="recap.js"></script>
