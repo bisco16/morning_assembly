@@ -1,10 +1,9 @@
 "use strict";
     function checkRecaptcha() {
     var response = grecaptcha.getResponse();
-    if(response.length == 0) { 
+    if(response.length == 0) {
     //reCaptcha 未認証
-   window.alert("お問い合わせありがとうございました。");
-    return false;
+   window.alert("reCaptchaが未認証です");
     }
     else { 
 //reCaptch 認証
