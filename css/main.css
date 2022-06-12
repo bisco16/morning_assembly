@@ -162,6 +162,14 @@ input,textarea{
     z-index: 999;
     margin: 70px auto;
     width: 100%;
+    padding: 0;
+}
+
+@media screen and (max-width: 650px) {
+    .menu_sp li {
+        display: block;
+        padding: 10px;
+    }
 }
 
 /*リストのレイアウト設定*/
