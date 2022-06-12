@@ -112,11 +112,6 @@ input,textarea{
     }
 }
 
-.gallery {
-    display: flex;
-    justify-content: center;
-}
-
 .exp_photo {
     width: 700px;
 }
