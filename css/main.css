@@ -322,3 +322,7 @@ footer{
     font-size: 1.5em;
   }
 }
+
+.center_p {
+  text-align: center;
+}
