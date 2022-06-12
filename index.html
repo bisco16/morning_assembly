@@ -1,54 +1,126 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
-    <!-- ↑このサイトのみ公開しているため、googleなどのクローラーに引っかからないようにしています。 -->
-    <title>Google reCAPTCHAの実装</title>
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script src="js/adobe_font.js"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google reCAPTCHAの実装</title>
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/recap.css">
+  <!-- Adobeフォントの読み込み -->
+  <script src="js/adobe_font.js"></script>
+  <script src="js/recap.js"></script>
 </head>
+
 <body>
-    <header>
-        <h1 class="site_title">朝礼での技術シェア<br>(3回目)</h1>
-        <nav>
-            <ul class="menu_pc">
-                <li><a href="index.html">ホーム</a></li>
-                <li><a href="html/random.html">ランダムLoading</a></li>
-                <li><a href="https://bisco16.github.io/morning_assembly_recap/" target="_blank" rel="noopener noreferrer">Google reCAPTCHAの実装</a></li>
-                <li><a href="html/LiveShare.html">余談</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+  <!-- スマホメニュー用 -->
+  <div class="openbtn"><span></span><span></span><span></span></div>
+  <nav id="g-nav">
+    <ul class="menu_sp">
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="html/random.html">ランダムLoading</a></li>
+      <li>
+        <a href="https://bisco16.github.io/morning_assembly/" target="_blank" rel="noopener noreferrer">Google
+          reCAPTCHAの実装</a>
+      </li>
+      <li><a href="html/LiveShare.html">余談</a></li>
+    </ul>
+  </nav>
+  <header>
+    <h1 class="site_title">朝礼での技術シェア</h1>
+    <nav>
+      <ul class="menu_pc">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="html/random.html">ランダムLoading</a></li>
+        <li>
+          <a href="https://bisco16.github.io/morning_assembly/" target="_blank" rel="noopener noreferrer">Google
+            reCAPTCHAの実装</a>
+        </li>
+        <li><a href="html/LiveShare.html">余談</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>アンケート本体</h2>
     <div id="formWrapper">
-        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdZ0fywr3cfUMa5DKvLcAds4NRvioEle0-h03yeCAU036qRFQ/formResponse" method="post"name="myForm" target="dummyIframe" onsubmit="return checkRecaptcha();">
-            <table>
-                <tr>
-                    <th>ニックネーム</th>
-                    <td><input type="text" name="entry.896218278" value="" required/></td>
-                </tr>
-                <tr>
-                    <th>好きな動物</th>
-                    <td><input type="text"required name="entry.1712780392"></td>
-                </tr>
-            </table>
-            <div class="g-recaptcha" data-sitekey="6LesGRogAAAAAGGwmz2ZcZwxa-_NaPWD36gsS_eR"></div>
-            <input type="hidden" name="entry.1099493155" value="dummy">
-            <input type="submit" value="送信">
-            <iframe name="dummyIframe" style="display:none;" onload="showThxMessage();"　></iframe>
-        </form>
+      <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdZ0fywr3cfUMa5DKvLcAds4NRvioEle0-h03yeCAU036qRFQ/formResponse"
+        method="post" name="myForm" target="dummyIframe" onsubmit="return checkRecaptcha();">
+        <table>
+          <tr>
+            <th>ニックネーム</th>
+            <td><input type="text" name="entry.896218278" value="" required /></td>
+          </tr>
+          <tr>
+            <th>好きな動物</th>
+            <td><input type="text" required name="entry.1712780392"></td>
+          </tr>
+        </table>
+        <div class="g-recaptcha" data-sitekey="6LesGRogAAAAAGGwmz2ZcZwxa-_NaPWD36gsS_eR"></div>
+        <input type="hidden" name="entry.1099493155" value="dummy">
+        <input type="submit" value="送信">
+        <iframe name="dummyIframe" style="display:none;" onload="showThxMessage();" 　></iframe>
+      </form>
     </div>
-    <div id="thxMessage">
-        <p>お問い合わせありがとうございました。</p>
-    </div>
-    <p>という感じのものを作りました</p>
-</main>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script src="js/recap.js"></script>
-    </body>
+    <p>という感じのものを作りました。</p>
+    <h2>解説</h2>
+    <h3>PHPが使えないなら、どんな方法が？</h3>
+    <p>
+      一応、PHPが使えるサーバーは有料ならいくらでもあったのですが、<br />
+      3ヶ月契約などが多かったため、たった1日のために利用するのはどうかと思ったのでこうしています。<br />
+      そして、Google フォームを reCaptcha付で埋め込むという、なんとも面白そうな方法を見つけました。<br />
+      <a href="https://forms.gle/JQpDTTiEDgV69WVM7">本体のアンケートフォーム</a><br />
+      ↑ここに書き込んでいます
+    </p>
+    <h2>方法</h2>
+    <h3>1.フォームをつくろう</h3>
+    <p>
+      GoogleフォームというGoogleのツールを使って、アンケートを作りましょう。<br>
+      一応、作ったものをそのままhtmlに貼り付けることは出来ます。しかし、その場合reCaptcha用のコードが丸見えになり、さらにサイトのイメージにも合わせられません。<br>
+      なので、サイトのイメージに合わせるためにも、サイト内に同じ構成のフォームを作りましょう。
+    </p>
+    <a href="https://www.g-workspace.jp/googleworkspace-reference/forms/create-form/">Googleフォーム作り方解説サイト</a>
+    <h3>2.自作フォームをつくろう</h3>
+    <p>
+      この辺はすでに習っていた内容ですので、詳しくは説明しませんが、「action」のところにフォームのリンク、inputの部分には「entry.」を貼り付ける必要があります。<br>
+      このタグは、デベロッパーツールにて確認できます。<br>
+      ※画像クリックで大きくなります
+    </p>
+
+    <a href="img/form_entry.png" class="gallery"><img src="img/form_entry.png" alt="" class="exp_photo"></a>
+
+    <p>この黄色の部分をコピーする必要があります。</p>
+    <h3>3.GASのコードを貼り付けよう！</h3>
+    <p>今回は、参考サイトのコードをそのまま使っています。<br>
+      最初に、Googleフォームにて、「スクリプトエディタ」を開きます。</p>
+    <a href="img/inScriptEdi2.png" class="gallery"><img src="img/inScriptEdi2.png" alt="" class="exp_photo"></a>
+    <p>
+      この青で囲っている部分をクリックして下さい。<br>
+      そして、開いたエディターに参考サイトのコードをそのまま貼り付けます。<br>
+      次に、目覚まし時計のようなマークをクリックして下さい。
+      そして、「トリガーを追加」で以下の設定にしたら完成です。
+    </p>
+    <a href="img/gas_triger.png" class="gallery"><img src="img/gas_triger.png" alt="" class="exp_photo"></a>
+    <h3>4.参考サイト</h3>
+    <p>以下のサイトを参考にさせていただきました。</p>
+    <a href="https://www.imuza.com/entry/2020/08/16/154209">参考サイトその1</a>
+    <a href="https://haniwaman.com/google-form-original/#index_id10">参考サイトその2</a>
+  </main>
+  <footer></footer>
+  <a href="#" id="top_btn"><i class="fa-solid fa-angle-up top_btn_icon"></i></a>
+  <!-- CDNの読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.0/progressbar.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <!-- 自作(ほぼ丸写し)のjs読み込み -->
+  <script src="js/topbtn.js"></script>
+  <script src="js/moodal.js"></script>
+</body>
+
 </html>
