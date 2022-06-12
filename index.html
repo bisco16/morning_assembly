@@ -26,27 +26,23 @@
     </header>
   <main>
     <h2>アンケート本体</h2>
-    <div id="formWrapper">
-      <form
-        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdZ0fywr3cfUMa5DKvLcAds4NRvioEle0-h03yeCAU036qRFQ/formResponse"
-        method="post" name="myForm" target="dummyIframe" onsubmit="return checkRecaptcha();">
-        <table>
-          <tr>
-            <th>ニックネーム</th>
-            <!-- <td><input type="text" name="entry.896218278" value="" required pattern="^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$" /></td> -->
-            <td><input type="text" name="entry.896218278" value="" /></td>
-          </tr>
-          <tr>
-            <th>好きな動物</th>
-            <td><input type="text" required name="entry.1712780392" /></td>
-          </tr>
-        </table>
-        <div class="g-recaptcha" data-sitekey="6LesGRogAAAAAGGwmz2ZcZwxa-_NaPWD36gsS_eR"></div>
-        <div id="recaptcha-error"></div>
-        <input type="hidden" name="entry.1099493155" value="dummy" />
-        <input type="submit" value="送信" />
-        <iframe name="dummyIframe" style="display: none" onload="showThxMessage();"></iframe>
-      </form>
+<div id="formWrapper">
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdZ0fywr3cfUMa5DKvLcAds4NRvioEle0-h03yeCAU036qRFQ/formResponse" method="post"name="myForm" target="dummyIframe" onsubmit="return checkRecaptcha();">
+            <table>
+                <tr>
+                    <th>ニックネーム</th>
+                    <td><input type="text" name="entry.896218278" value="" required/></td>
+                </tr>
+                <tr>
+                    <th>好きな動物</th>
+                    <td><input type="text"required name="entry.1712780392"></td>
+                </tr>
+            </table>
+            <div class="g-recaptcha" data-sitekey="6LesGRogAAAAAGGwmz2ZcZwxa-_NaPWD36gsS_eR"></div>
+            <input type="hidden" name="entry.1099493155" value="dummy">
+            <input type="submit" value="送信">
+            <iframe name="dummyIframe" style="display:none;" onload="showThxMessage();"　></iframe>
+        </form>
     </div>
     <p>という感じのものを作りました。</p>
     <h2>解説</h2>
