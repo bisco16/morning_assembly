@@ -16,9 +16,7 @@ function checkRecaptcha() {
 function showThxMessage() {
     var text = document.myForm.elements['entry.896218278'].value; // ニックネームのname属性
     if (text !== '') {
-//         document.myForm.reset();
-//         document.getElementById('formWrapper').style.display = 'none';
-//         document.getElementById('thxMessage').style.display = 'block';
+        document.myForm.reset();
         window.alert("ご協力ありがとうございました")
     }
 }
