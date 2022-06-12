@@ -276,6 +276,16 @@ footer{
           justify-content: center;
 }
 
+#formWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+
 /*========= Loading用CSS終わり ===============*/
 /* 右下トップボタン  */
 #top_btn {
