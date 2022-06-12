@@ -115,6 +115,21 @@ input,textarea{
     }
 }
 
+.gallery {
+    display: flex;
+    justify-content: center;
+}
+
+.exp_photo {
+    width: 700px;
+}
+
+@media screen and (max-width: 650px) {
+    .exp_photo {
+        width: 100%;
+    }
+}
+
 /* スマホメニュー用 */
 #g-nav {
     display: none;
